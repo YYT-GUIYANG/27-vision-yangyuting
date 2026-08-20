@@ -246,19 +246,7 @@ publisher 发 RGB-D / oracle 检测 / 候选位姿
 ## 附录 · 复现命令
 
 ```Bash
-*# 1) 编译 ROS 包（注意 base-paths）*source /opt/ros/humble/setup.bash
-cd ~/summer_plan/ros2_ws
-colcon build --packages-select rcia_energy_trace_ros \
-  --base-paths src/RCIA_Benmao_Vision/ros2/rcia_energy_trace_ros
-source install/setup.bash
-
-*# 2) 全链仿真（约 25s，产出 results_v1/ros_logs/）*
-bash mycode/ros/run_fullchain.sh
-
-*# 3) 评估 + 出图 + 视频*
-python3 mycode/ros/eval_m3t_tracking.py
-python3 mycode/sim/make_report_figures.py
-python3 mycode/sim/make_effect_gallery.py
-python3 mycode/sim/make_video.py
+cd "/home/yangyuting/桌面/华南虎视觉任务/02-neural-network/RCIA_energy_6dof"
+bash run_demo.sh
 ```
 
